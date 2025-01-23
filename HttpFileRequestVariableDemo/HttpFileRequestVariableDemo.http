@@ -8,9 +8,13 @@ username=admin&password=password
 
 ###
 
+@bearerToken = {{Login.response.body.$.token}}
+
+###
+
 # @name GetTodos200
 GET {{BaseAddress}}/todos
-Authorization: Bearer {{Login.response.body.$.token}}
+Authorization: Bearer {{bearerToken}}
 
 ###
 
